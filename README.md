@@ -74,8 +74,11 @@ Simplifies the login process, allowing users to log in easily with their Huawei 
 
 ## Screenshots
 
-![Screenshot 1]()
+![Screenshot 1](https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/f82a506d-8040-41d3-a3e2-9292611f3203)
 *Caption for Screenshot 1*
 
-![Screenshot 2]()
+![Screenshot 2](https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/4f1e97a1-f263-459a-95b4-04a4aec308aa)
 *Caption for Screenshot 2*
+
+![Screenshot 3](https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/748d55f5-b481-4480-b9a7-12fa79377c2a)
+*Caption for Screenshot 3*
