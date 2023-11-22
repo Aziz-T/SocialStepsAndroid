@@ -1,3 +1,4 @@
+
 # Social Steps
 
 Social Steps is a social fitness application that allows users to track their daily step counts and burned calories, and share them with friends. The app is designed to promote a healthy lifestyle and facilitate interaction among users.
@@ -75,9 +76,9 @@ Simplifies the login process, allowing users to log in easily with their Huawei 
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/8b78b4ef-37b6-4138-bf54-570cee717acf" alt="Screenshot 1" width="30%"/>
-  <img src="https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/4f1e97a1-f263-459a-95b4-04a4aec308aa" alt="Screenshot 2" width="30%"/>
-  <img src="https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/748d55f5-b481-4480-b9a7-12fa79377c2a" alt="Screenshot 3" width="30%"/>
+  <img src="https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/5f080600-7c57-4945-bf39-f4d3b4ecba2e" alt="Screenshot 1" width="30%"/>
+  <img src="https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/d25ffd41-f578-42bc-b7e8-250ecabdd8fd" alt="Screenshot 2" width="30%"/>
+  <img src="https://github.com/Aziz-T/SocialStepsAndroid/assets/48774168/55b24741-ea73-4a5c-b9f6-e52a60900ff6" alt="Screenshot 3" width="30%"/>
 </p>
 
 
