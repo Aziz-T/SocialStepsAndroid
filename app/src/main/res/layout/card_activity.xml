@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/ivActivity"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_directions_walk_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/solid_circle"
+            app:tint="@color/white"
+            android:contentDescription="@string/activity_image" />
+
+        <TextView
+            android:id="@+id/tvActivityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ivActivity"
+            app:layout_constraintStart_toStartOf="@id/ivActivity"
+            app:layout_constraintEnd_toEndOf="@id/ivActivity"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            tools:text="Walk"/>
+
+        <TextView
+            android:id="@+id/tvActivityDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvActivityName"
+            app:layout_constraintEnd_toEndOf="@id/tvActivityName"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityName"
+            android:layout_marginTop="10dp"
+            tools:text="April 15:11:17"/>
+
+        <ImageView
+            android:id="@+id/ivCalories"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityDate"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="100dp"
+            android:src="@drawable/ic_burn_calories"
+            app:tint="#FF5249"
+            android:contentDescription="@string/calories_icon" />
+
+        <ImageView
+            android:id="@+id/ivDuration"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityDate"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/ic_duration_com"
+            app:tint="#50C878"
+            android:contentDescription="@string/duration_icon" />
+
+        <TextView
+            android:id="@+id/tvCaloriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ivCalories"
+            app:layout_constraintEnd_toEndOf="@id/ivCalories"
+            app:layout_constraintTop_toBottomOf="@id/ivCalories"
+            android:layout_marginTop="10dp"
+            tools:text="500 kcal"/>
+
+        <TextView
+            android:id="@+id/tvDurationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ivDuration"
+            app:layout_constraintEnd_toEndOf="@id/ivDuration"
+            app:layout_constraintTop_toBottomOf="@id/ivDuration"
+            android:layout_marginTop="10dp"
+            tools:text="01:00:00"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

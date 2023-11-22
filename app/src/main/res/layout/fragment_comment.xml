@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.comment.CommentFragment">
+
+    <com.sn.lib.NestedProgress
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:innerLoaderColor="@color/primary_green"
+        app:outerLoaderColor="@color/primary_green_dark"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/commentToolbar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="@color/primary_green_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="11dp"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                app:tint="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvCommentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Comments"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commentToolbar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvCommentTitle"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <com.hms.socialsteps.utils.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/user_profile_image"
+                    android:src="@drawable/ic_baseline_directions_run_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPostUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#808080"
+                    app:layout_constraintStart_toEndOf="@+id/ivProfile"
+                    app:layout_constraintTop_toTopOf="@id/ivProfile"
+                    tools:text="User Name">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tvPostDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postImage"
+                    tools:text="@string/i_did_a_running_activity" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ivProfile"
+                    tools:text="12.22.2021" />
+
+                <ImageView
+                    android:id="@+id/postImage"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/solid_circle"
+                    android:contentDescription="@string/post_image"
+                    android:src="@drawable/ic_baseline_directions_run_24_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/recycler_view"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintBottom_toTopOf="@id/commentLayout"/>
+
+        <LinearLayout
+            android:id="@+id/commentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center_vertical"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <EditText
+                android:layout_weight="6"
+                android:id="@+id/etUserComment"
+                android:layout_width="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:textSize="15sp"
+                android:imeOptions="actionDone"
+                android:hint="Write your comment" />
+
+            <Button
+                android:layout_weight="2"
+                android:id="@+id/btnPublishComment"
+                android:layout_width="0dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:text="Send"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:strokeColor="@color/pastel_green"
+                app:strokeWidth="4dp"
+
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

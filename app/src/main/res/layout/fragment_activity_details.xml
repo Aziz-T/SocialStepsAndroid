@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ivSearchUser"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="@color/primary_green_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="11dp"
+                android:gravity="center"
+                android:textSize="19sp"
+                android:text="@string/title_activity_details"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/buttonBack"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="11dp"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                app:tint="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ivActivityType"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/runner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivSearchUser" />
+
+
+        <TextView
+            android:id="@+id/tvDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_activity_date"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivActivityType" />
+
+
+        <TextView
+            android:id="@+id/tvDateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDateTitle"
+            tools:text="15.08.2022" />
+
+        <ImageView
+            android:id="@+id/ivTotalDistance"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/totaldistance"
+            app:layout_constraintTop_toBottomOf="@id/tvDateValue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTotalDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/ad_total_distance"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle=""
+            app:layout_constraintStart_toEndOf="@id/ivTotalDistance"
+            app:layout_constraintTop_toTopOf="@id/ivTotalDistance"
+            app:layout_constraintBottom_toBottomOf="@id/ivTotalDistance"/>
+
+
+        <TextView
+            android:id="@+id/tvTotalDistanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tvTotalDistance"
+            app:layout_constraintTop_toTopOf="@id/tvTotalDistance"
+            tools:text="3 km" />
+
+        <ImageView
+            android:id="@+id/ivDuration"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_duration_com"
+            app:layout_constraintTop_toBottomOf="@id/ivTotalDistance"
+            app:layout_constraintStart_toStartOf="@id/ivTotalDistance" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvTotalDistance"
+            app:layout_constraintTop_toTopOf="@id/ivDuration"
+            app:layout_constraintBottom_toBottomOf="@id/ivDuration"/>
+
+        <TextView
+            android:id="@+id/tvDurationValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/tvDuration"
+            app:layout_constraintTop_toTopOf="@id/tvDuration"
+            tools:text="01:05:37" />
+
+        <ImageView
+            android:id="@+id/ivBurntCalories"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/calorie"
+            app:layout_constraintTop_toBottomOf="@id/ivDuration"
+            app:layout_constraintStart_toStartOf="@id/ivDuration" />
+
+        <TextView
+            android:id="@+id/tvBurntCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_burn_total"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvDuration"
+            app:layout_constraintTop_toTopOf="@id/ivBurntCalories"
+            app:layout_constraintBottom_toBottomOf="@id/ivBurntCalories"/>
+
+        <TextView
+            android:id="@+id/tvBurntCaloriesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tvBurntCalories"
+            app:layout_constraintTop_toTopOf="@id/tvBurntCalories"
+            tools:text="352 kcal" />
+
+        <!--<ImageView
+            android:id="@+id/ivHeartRate"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rate_heart"
+            app:layout_constraintTop_toBottomOf="@id/ivBurntCalories"
+            app:layout_constraintStart_toStartOf="@id/ivBurntCalories" />
+
+        <TextView
+            android:id="@+id/tvHeartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_heart_rate"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvBurntCalories"
+            app:layout_constraintTop_toTopOf="@id/ivHeartRate"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeartRate"/>
+
+        <TextView
+            android:id="@+id/tvHeartRateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tvHeartRate"
+            app:layout_constraintTop_toTopOf="@id/tvHeartRate"
+            tools:text="112 " />-->
+
+        <ImageView
+            android:id="@+id/ivTotalSteps"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/steps"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/ivBurntCalories"
+            app:layout_constraintStart_toStartOf="@id/ivBurntCalories" />
+
+        <TextView
+            android:id="@+id/tvTotalSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_total_steps"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvBurntCalories"
+            app:layout_constraintTop_toTopOf="@id/ivTotalSteps"
+            app:layout_constraintBottom_toBottomOf="@id/ivTotalSteps"/>
+
+        <TextView
+            android:id="@+id/tvTotalStepsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tvTotalSteps"
+            app:layout_constraintTop_toTopOf="@id/tvTotalSteps"
+            tools:text="10234" />
+
+        <!--<ImageView
+            android:id="@+id/ivStepRate"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ratio"
+            app:layout_constraintTop_toBottomOf="@id/ivTotalSteps"
+            app:layout_constraintStart_toStartOf="@id/ivTotalSteps" />
+
+        <TextView
+            android:id="@+id/tvStepRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_steps_rate"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvTotalSteps"
+            app:layout_constraintTop_toTopOf="@id/ivStepRate"
+            app:layout_constraintBottom_toBottomOf="@id/ivStepRate"/>
+
+        <TextView
+            android:id="@+id/tvStepRateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tvStepRate"
+            app:layout_constraintTop_toTopOf="@id/tvStepRate"
+            tools:text="%42" />-->
+
+        <!--<ImageView
+            android:id="@+id/ivRunningForm"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_baseline_directions_walk_24"
+            app:layout_constraintTop_toBottomOf="@id/ivStepRate"
+            app:layout_constraintStart_toStartOf="@id/ivAverageSpeed" />
+
+        <TextView
+            android:id="@+id/tvRunningForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_running_form"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvStepRate"
+            app:layout_constraintTop_toTopOf="@id/ivRunningForm"
+            app:layout_constraintBottom_toBottomOf="@id/ivRunningForm"/>
+
+        <TextView
+            android:id="@+id/tvRunningFormValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tvRunningForm"
+            app:layout_constraintTop_toTopOf="@id/tvRunningForm"
+            tools:text="Available" />-->
+
+        <Button
+            android:id="@+id/btnShareActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.sn.lib.NestedProgress
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:innerLoaderColor="@color/primary_green"
+        app:outerLoaderColor="@color/primary_green_dark"
+        android:indeterminateTintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <EditText
+        android:inputType="numberDecimal"
+        android:id="@+id/etIntakeCalories"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_burn_calories"
+        android:gravity="center"
+        android:hint="@string/please_enter_calories_taken"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnSaveCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.sn.lib.NestedProgress
+            android:id="@+id/pbLoading"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="invisible"
+            app:innerLoaderColor="@color/primary_green"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSaveCalories"
+            app:layout_constraintEnd_toEndOf="@+id/btnSaveCalories"
+            app:layout_constraintStart_toStartOf="@+id/btnSaveCalories"
+            app:layout_constraintTop_toTopOf="@+id/btnSaveCalories"
+            app:outerLoaderColor="@color/primary_green_dark" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/process_failed"
+        android:textColor="@color/hwid_auth_button_color_red"
+        android:visibility="invisible" />
+
+</LinearLayout>

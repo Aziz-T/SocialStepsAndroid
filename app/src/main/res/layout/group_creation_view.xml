@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/parentConstraintLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:background="@color/primary_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tvCreateGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Create Group"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"/>
+
+        <ImageButton
+            android:id="@+id/ibCloseAlertDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_baseline_close_24"
+            android:backgroundTint="@color/primary_green_dark"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvGroupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customToolbar"
+        android:text="Group Name:"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/etGroupName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvGroupName"
+        app:layout_constraintStart_toEndOf="@id/tvGroupName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvGroupName"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tvTargetType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvGroupName"
+        app:layout_constraintTop_toBottomOf="@id/etGroupName"
+        android:layout_marginTop="15dp"
+        android:text="Target Type:"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+    <RadioGroup
+        android:id="@+id/rgTargetType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvTargetType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTargetType"
+        android:layout_marginTop="15dp">
+        <RadioButton
+            android:id="@+id/rbSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:checked="true"
+            android:text="@string/Step"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/rbCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/calorie_red"
+            android:checked="false"
+            android:text="@string/Calorie"
+            android:textSize="18sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvStepTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/rgTargetType"
+        app:layout_constraintTop_toBottomOf="@id/rgTargetType"
+        android:text="@string/step_target"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/etStepTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvStepTarget"
+        app:layout_constraintTop_toTopOf="@id/tvStepTarget"
+        app:layout_constraintBottom_toBottomOf="@id/tvStepTarget"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="14dp"
+        android:minEms="5"
+        android:maxLines="1"
+        android:maxLength="5"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/tvCalorieTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/rgTargetType"
+        app:layout_constraintTop_toBottomOf="@id/rgTargetType"
+        android:text="@string/calorie_target"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/etCalorieTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvCalorieTarget"
+        app:layout_constraintTop_toTopOf="@id/tvCalorieTarget"
+        app:layout_constraintBottom_toBottomOf="@id/tvCalorieTarget"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="14dp"
+        android:minEms="4"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:inputType="numberDecimal"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etStepTarget"
+        android:layout_marginTop="15dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        />
+
+    <com.sn.lib.NestedProgress
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:innerLoaderColor="@color/primary_green"
+        app:outerLoaderColor="@color/primary_green_dark"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

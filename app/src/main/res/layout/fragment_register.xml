@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sn.lib.NestedProgress
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="invisible"
+            app:innerLoaderColor="@color/primary_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outerLoaderColor="@color/primary_green_dark" />
+
+        <!--<androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="@color/primary_green_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+            &lt;!&ndash;<ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="11dp"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;
+
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <!--<ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
+
+        <TextView
+            android:id="@+id/tvChangeProfilePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:padding="5dp"
+            android:text="@string/register_title"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="@string/register_full_name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etFullName"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etFullName"
+            tools:text="Full Name" />
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvFullName"
+            app:layout_constraintTop_toBottomOf="@id/tvChangeProfilePhoto" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="@string/register_username"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etUsername"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etUsername"
+            tools:text="Username" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etFullName"
+            app:layout_constraintTop_toBottomOf="@+id/etFullName" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="@string/register_age"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etAge"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etAge"
+            tools:text="Age" />
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etFullName"
+            app:layout_constraintTop_toBottomOf="@id/etUsername" />
+
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="@string/register_height"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etHeight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etHeight"
+            tools:text="Height" />
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etFullName"
+            app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+        <TextView
+            android:id="@+id/tvWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="@string/register_weight"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etWeight"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etWeight"
+            tools:text="Weight" />
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etFullName"
+            app:layout_constraintTop_toBottomOf="@id/etHeight" />
+
+        <TextView
+            android:id="@+id/tvTargetSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="@string/register_target_step"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etTargetSteps"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etTargetSteps"
+            tools:text="Target Step" />
+
+        <EditText
+            android:id="@+id/etTargetSteps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etFullName"
+            app:layout_constraintTop_toBottomOf="@id/etWeight" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="@string/register_gender"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinnerGender"
+            tools:text="Gender" />
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etFullName"
+            app:layout_constraintTop_toBottomOf="@+id/etTargetSteps" />
+
+        <TextView
+            android:id="@+id/tvSharePermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/permissionSwitch"
+            app:layout_constraintStart_toStartOf="@id/tvGender"
+            app:layout_constraintTop_toBottomOf="@id/spinnerGender"
+            android:text="@string/i_want_to_share_my_calorie_and_step_data_with_my_friends_automatically"
+            android:textColor="@color/black"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:id="@+id/btnPermissionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSharePermission"
+            app:layout_constraintBottom_toBottomOf="@id/tvSharePermission"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_baseline_info_24"
+            android:background="@android:color/transparent"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/permissionSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tvSharePermission"
+            app:layout_constraintBottom_toBottomOf="@id/tvSharePermission"
+            app:layout_constraintEnd_toStartOf="@id/btnPermissionInfo"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tvExerciseFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/please_select_your_exercise_frequency"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvGender"
+            app:layout_constraintTop_toBottomOf="@id/permissionSwitch" />
+
+        <RadioGroup
+            android:id="@+id/rgExerciseFrequency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExerciseFrequency">
+
+            <RadioButton
+                android:id="@+id/rbSedentary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary_green"
+                android:checked="true"
+                android:text="@string/sedentary_little_or_no_exercise"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rbLightlyActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary_green"
+                android:checked="false"
+                android:text="@string/lightly_active_light_exercise_sports_1_3_days_week"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rbModeratelyActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary_green"
+                android:checked="false"
+                android:text="@string/moderately_active_moderate_exercise_sports_3_5_days_week"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rbVeryActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary_green"
+                android:checked="false"
+                android:text="@string/very_active_hard_exercise_sports_6_7_days_a_week"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rbExtraActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary_green"
+                android:checked="false"
+                android:text="@string/extra_active_very_hard_exercise_sports_a_physical_job"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvGainOrLoseWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxEms="32"
+            android:maxLines="1"
+            android:text="I want to"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/spinnerGainOrLoseWeight"
+            app:layout_constraintStart_toStartOf="@id/rgExerciseFrequency"
+            app:layout_constraintTop_toTopOf="@id/spinnerGainOrLoseWeight"
+            tools:text="I want to" />
+
+        <Spinner
+            android:id="@+id/spinnerGainOrLoseWeight"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/tvGainOrLoseWeight"
+            app:layout_constraintTop_toBottomOf="@id/rgExerciseFrequency" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="weight"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/spinnerGainOrLoseWeight"
+            app:layout_constraintStart_toEndOf="@id/spinnerGainOrLoseWeight"
+            app:layout_constraintTop_toTopOf="@id/spinnerGainOrLoseWeight" />
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGainOrLoseWeight" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

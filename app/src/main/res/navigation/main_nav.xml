@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/navFeed">
+
+    <fragment
+        android:id="@+id/navFeed"
+        android:name="com.hms.socialsteps.ui.feed.FeedFragment"
+        android:label="@string/title_feed"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_navFeed_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_navFeed_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_navFeed_to_visitedProfileFragment"
+            app:destination="@id/visitedProfileFragment" />
+        <action
+            android:id="@+id/action_navFeed_to_activityDetailsFragment"
+            app:destination="@id/activityDetailsFragment" />
+        <action
+            android:id="@+id/action_navFeed_to_commentFragment"
+            app:destination="@id/commentFragment" />
+        <action
+            android:id="@+id/action_navFeed_to_directMessagesFragment"
+            app:destination="@id/directMessagesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navSearch"
+        android:name="com.hms.socialsteps.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_navSearch_to_visitedProfileFragment"
+            app:destination="@id/visitedProfileFragment" />
+        <action
+            android:id="@+id/action_navSearch_to_navProfile"
+            app:destination="@id/navProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navActivities"
+        android:name="com.hms.socialsteps.ui.activities.ActivitiesFragment"
+        android:label="@string/title_activities"
+        tools:layout="@layout/fragment_activities">
+        <action
+            android:id="@+id/action_navActivities_to_activityDetailsFragment"
+            app:destination="@id/activityDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navProfile"
+        android:name="com.hms.socialsteps.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navProfile_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_navProfile_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.hms.socialsteps.ui.register.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.hms.socialsteps.ui.map.MapFragment"
+        android:label="MapFragment" />
+    <fragment
+        android:id="@+id/visitedProfileFragment"
+        android:name="com.hms.socialsteps.ui.visitedprofile.VisitedProfileFragment"
+        android:label="fragment_visited_profile"
+        tools:layout="@layout/fragment_visited_profile" >
+        <action
+            android:id="@+id/action_visitedProfileFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+        
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.hms.socialsteps.ui.profile.editprofile.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/activityDetailsFragment"
+        android:name="com.hms.socialsteps.ui.activitydetails.ActivityDetailsFragment"
+        android:label="ActivityDetailsFragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.hms.socialsteps.ui.notification.NotificationFragment"
+        android:label="NotificationFragment">
+        <action
+            android:id="@+id/action_notificationFragment_to_visitedProfileFragment"
+            app:destination="@id/visitedProfileFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendRequestFragment"
+        android:name="com.hms.socialsteps.ui.friendrequest.FriendRequestFragment"
+        android:label="fragment_friend_request"
+        tools:layout="@layout/fragment_friend_request">
+        <action
+            android:id="@+id/action_friendRequestFragment_to_visitedProfileFragment"
+            app:destination="@id/visitedProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.hms.socialsteps.ui.comment.CommentFragment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" />
+    <fragment
+        android:id="@+id/navStats"
+        android:name="com.hms.socialsteps.ui.statistics.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" />
+    <fragment
+        android:id="@+id/messagingScreenFragment"
+        android:name="com.hms.socialsteps.ui.messagingscreen.MessagingScreenFragment"
+        android:label="fragment_messaging_screen"
+        tools:layout="@layout/fragment_messaging_screen" />
+    <fragment
+        android:id="@+id/directMessagesFragment"
+        android:name="com.hms.socialsteps.ui.directmessages.DirectMessagesFragment"
+        android:label="fragment_direct_messages"
+        tools:layout="@layout/fragment_direct_messages" >
+        <action
+            android:id="@+id/action_directMessagesFragment_to_messagingScreenFragment"
+            app:destination="@id/messagingScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newChatFragment"
+        android:name="com.hms.socialsteps.ui.newchat.NewChatFragment"
+        android:label="fragment_new_chat"
+        tools:layout="@layout/fragment_new_chat" />
+    <fragment
+        android:id="@+id/groupDetailFragment"
+        android:name="com.hms.socialsteps.ui.groupdetail.GroupDetailFragment"
+        android:label="fragment_group_detail"
+        tools:layout="@layout/fragment_group_detail" />
+    <fragment
+        android:id="@+id/groupStatisticsFragment"
+        android:name="com.hms.socialsteps.ui.statistics.groupstatistics.GroupStatisticsFragment"
+        android:label="fragment_group_statistics"
+        tools:layout="@layout/fragment_group_statistics" >
+        <action
+            android:id="@+id/action_groupStatisticsFragment_to_visitedProfileFragment"
+            app:destination="@id/visitedProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navGroups"
+        android:name="com.hms.socialsteps.ui.groups.GroupsFragment"
+        android:label="fragment_groups"
+        tools:layout="@layout/fragment_groups" />
+    <fragment
+        android:id="@+id/friendStatisticsFragment"
+        android:name="com.hms.socialsteps.ui.statistics.friendstatistics.FriendStatisticsFragment"
+        android:label="fragment_friend_statistics"
+        tools:layout="@layout/fragment_friend_statistics" />
+
+</navigation>

@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">SocialSteps</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_search">Search</string>
+    <string name="title_activities">Activities</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_statistics">Statistics</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_activity_details">Activity Details</string>
+    <string name="friend_requests">Friend Requests</string>
+    <string name="app_name_with_space">Social Steps</string>
+
+    <string name="request_code_invalid">Request code is invalid!</string>
+
+
+    <!--Profile Fragment-->
+    <string name="profile_age">Age</string>
+    <string name="profile_height">Height</string>
+    <string name="profile_weight">Weight</string>
+    <string name="profile_gender">Gender</string>
+
+    <!--StepCount Layout-->
+    <string name="scl_step_count">Step Count</string>
+    <string name="scl_target">Target</string>
+
+    <!--Activity Details Fragment -->
+    <string name="ad_total_distance">Total Distance :</string>
+    <string name="ad_average_speed">Average Speed :</string>
+    <string name="ad_burn_total">Burn Total :</string>
+    <string name="ad_heart_rate">Heart Rate :</string>
+    <string name="ad_total_steps">Total Steps :</string>
+    <string name="ad_steps_rate">Steps Rate :</string>
+    <string name="ad_running_form">Running Form :</string>
+    <string name="ad_activity_date">Activity Date</string>
+
+    <!--Register Fragment-->
+    <string name="register_title">Please fill all the fields before proceeding.</string>
+    <string name="register_add_profile_photo">Add Profile Photo</string>
+    <string name="register_success">Information saved successfully.</string>
+    <string name="register_error">Process is not successful! Please try again later.</string>
+    <string name="register_full_name">Full Name</string>
+    <string name="register_username">Username</string>
+    <string name="register_age">Age</string>
+    <string name="register_height">Height</string>
+    <string name="register_weight">Weight</string>
+    <string name="register_gender">Gender</string>
+    <string name="register_target_step">Target Step</string>
+
+    <!--Edit Profile Fragment-->
+    <string name="edit_profile_full_name">Full Name</string>
+    <string name="edit_profile_username">Username</string>
+    <string name="edit_profile_age">Age</string>
+    <string name="edit_profile_height">Height</string>
+    <string name="edit_profile_weight">Weight</string>
+    <string name="edit_profile_gender">Gender</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="weight_array">
+        <item>Gain</item>
+        <item>Lose</item>
+    </string-array>
+
+    <string name="fullname">Full name: %1$s</string>
+    <string name="age">Age: %1$s</string>
+    <string name="search_by_username">Search by username</string>
+    <string name="no_result">No result</string>
+    <string name="activity_image">Activity Image</string>
+    <string name="calories_icon">Calories Icon</string>
+    <string name="duration_icon">Duration Icon</string>
+    <string name="info_button">info button</string>
+    <string name="add_calories">Add Calories</string>
+    <string name="you_dont_have_any_activity_yet">You don\'t have any activity yet. To get latest activities please swipe to refresh.</string>
+    <string name="please_select_your_exercise_frequency">Please select your exercise frequency:</string>
+    <string name="sedentary_little_or_no_exercise">Sedentary(little or no exercise)</string>
+    <string name="lightly_active_light_exercise_sports_1_3_days_week">Lightly active (light exercise/sports 1-3 days/week)</string>
+    <string name="moderately_active_moderate_exercise_sports_3_5_days_week">Moderately active (moderate exercise/sports 3-5 days/week)</string>
+    <string name="very_active_hard_exercise_sports_6_7_days_a_week">Very active (hard exercise/sports 6-7 days a week)</string>
+    <string name="extra_active_very_hard_exercise_sports_a_physical_job"><![CDATA[Extra active (very hard exercise/sports & a physical job)]]></string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="error">Error</string>
+    <string name="warning">Warning</string>
+    <string name="share_steps_error_message">You can not share your steps achievement until you reach your goal!</string>
+    <string name="share_calorie_achievement_error_message">You can not share your calorie achievement until you reach your goal!</string>
+    <string name="share_calorie_achievement_error_message_low">You can not share your calorie achievement if there is no difference of at least 500 calories between your daily calorie target and the calories you take!</string>
+    <string name="share_calorie_achievement_error_message_high">You can not share your calorie achievement because you took more calories than your goal!</string>
+    <string name="process_failed_refresh_the_page">Process failed! Refresh the page.</string>
+    <string name="authorize_app">Authorize App</string>
+    <string name="log_out_app">Log out</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="please_enter_calories_taken">Please enter calories taken:</string>
+    <string name="sent_you_a_friend_request">sent you a friend request</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="process_failed">Process failed!</string>
+    <string name="epf_photo_picker_error">Image could not get! Try again.</string>
+    <string name="calorie_circle_info_title">Calorie Circle Info</string>
+    <string name="calorie_circle_info_text">If you want to gain weight, to reach your goal, you must take at least your target calories daily. Otherwise if you want to lose weight, you must not take more calories than the daily target calories.</string>
+    <string name="ok">OK</string>
+    <string name="request_sent">Request Sent</string>
+    <string name="you_have_no_new_friend_request">You have no new friend request</string>
+    <string name="authorization_error">Authorization Error</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="empty_data">Empty Data</string>
+    <string name="no_calories_data_found"><![CDATA[No calories data found from Health Kit. Please open Health App -> Me -> Privacy Management and make sure HUAWEI Health Kit option is enabled. Also please make sure you synced latest data to Cloud.]]></string>
+    <string name="no_steps_data_found"><![CDATA[No steps data found from Health Kit. Please open Health App -> Me -> Privacy Management and make sure HUAWEI Health Kit option is enabled. Also please make sure you synced latest data to Cloud.]]></string>
+    <string name="feed_no_feed">Add new friends to see their activities.</string>
+    <string name="i_did_a_running_activity">I did a running activity!</string>
+    <string name="like">Like</string>
+    <string name="i_did_a_walking_activity">I did a walking activity!</string>
+    <string name="user_profile_image">user profile image</string>
+    <string name="post_image">post image</string>
+    <string name="comment_button">comment button</string>
+    <string name="like_button">like button</string>
+    <string name="you_have_no_new_notification">You have no new notification</string>
+    <string name="liked_your_post">liked your post</string>
+    <string name="commented_on_your_post">commented on your post</string>
+    <string name="accepted_your_friend_request">accepted your friend request</string>
+    <string name="show_steps">Steps&gt;&gt;</string>
+    <string name="show_calories">&lt;&lt;Calories</string>
+    <string name="group_add_notification_text">added you to <b>%1$s</b>.</string>
+    <string name="private_profile">Private Profile</string>
+
+    <!-- Feed Adapter -->
+    <string name="steps_post_text">I reached my %1$s step target by taking %2$s steps!</string>
+    <string name="calories_post_text">I reached my %1$s calories target by taking %2$s calories!</string>
+    <string name="rank">Rank</string>
+    <string name="sort_by">Sort by</string>
+    <string name="steps">steps</string>
+    <string name="calories">calories</string>
+    <string name="i_want_to_share_my_calorie_and_step_data_with_my_friends_automatically">I want to share my calorie and step data with my friends automatically</string>
+    <string name="this_feature_will_be_available_soon">This feature will be available soon</string>
+    <string name="share_permission_info">By enabling this feature, you are accepting that your daily steps and burned calories will be shared with your friends automatically.</string>
+
+    <!-- Notification Content -->
+    <string name="nc_like">%1$s liked your post</string>
+    <string name="nc_comment">%1$s commented "%2$s"</string>
+    <string name="duration">Duration :</string>
+    <string name="please_swipe_and_refresh_to_fetch_your_latest_daily_data_from_health_app">(Please swipe and refresh to fetch your latest daily data from Health App)</string>
+    <string name="you_are_not_a_member_of_any_group_you_can_create_one_by_tapping_button_at_the_bottom_right">You are not a member of any group. You can create one by tapping \'+\' button at the bottom right.</string>
+    <string name="you_have_no_friends">You don not have any friends yet.</string>
+    <string name="Step">Step</string>
+    <string name="Calorie">Calorie</string>
+    <string name="step_calorie">Step + Calorie</string>
+    <string name="create">Create</string>
+    <string name="calorie_target">Calorie Target:</string>
+    <string name="step_target">Step Target:</string>
+    <string name="next">Next</string>
+    <string name="add">Add</string>
+    <string name="remove">remove</string>
+    <string name="leave_group">Leave group</string>
+    <string name="members">Members:</string>
+    <string name="all_of_your_friends_are_member_of_this_group_already">All of your friends are member of this group already!</string>
+    <string name="groups">Groups</string>
+    <string name="direct_messages">Direct Messages</string>
+    <string name="start_new_chat">Start New Chat</string>
+</resources>

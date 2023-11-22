@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hms.socialsteps.core.util.CustomSwipeRefresh xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ViewFlipper
+                android:id="@+id/view_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_circularProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toTopOf="@id/btnAddCalories"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/cpiCalories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:indicatorColor="@color/hwid_auth_button_color_red"
+                        app:indicatorSize="200dp"
+                        app:layout_constraintEnd_toEndOf="@+id/cl_circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@+id/cl_circularProgressBar"
+                        app:layout_constraintTop_toTopOf="@+id/cl_circularProgressBar"
+                        app:trackColor="#FFCCCB"
+                        app:trackThickness="10dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvCaloriesGoalTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:text="Goal"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@id/cl_circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@id/cl_circularProgressBar"
+                        app:layout_constraintTop_toTopOf="@id/cl_circularProgressBar"
+                        tools:text="Goal" />
+
+                    <TextView
+                        android:id="@+id/tvCaloriesGoalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@id/cl_circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@id/cl_circularProgressBar"
+                        app:layout_constraintTop_toBottomOf="@id/tvCaloriesGoalTitle"
+                        tools:text="2300" />
+
+                    <TextView
+                        android:id="@+id/tvCaloriesBurnedTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Calories Burned"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@id/cl_circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@id/cl_circularProgressBar"
+                        app:layout_constraintTop_toBottomOf="@id/tvCaloriesGoalValue"
+                        tools:text="Calories Burned" />
+
+                    <TextView
+                        android:id="@+id/tvCaloriesBurnedValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@id/cl_circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@id/cl_circularProgressBar"
+                        app:layout_constraintTop_toBottomOf="@id/tvCaloriesBurnedTitle"
+                        tools:text="700" />
+
+                    <TextView
+                        android:id="@+id/tvCaloriesIntakeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Calories Intake"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@id/cl_circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@id/cl_circularProgressBar"
+                        app:layout_constraintTop_toBottomOf="@id/tvCaloriesBurnedValue"
+                        tools:text="Calories Intake" />
+
+                    <TextView
+                        android:id="@+id/tvCaloriesIntakeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@id/cl_circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@id/cl_circularProgressBar"
+                        app:layout_constraintTop_toBottomOf="@id/tvCaloriesIntakeTitle"
+                        tools:text="2000" />
+                    <TextView
+                        android:id="@+id/tvLastUpdatedCalorieTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cpiCalories" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutStepCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toTopOf="@id/btnAddCalories"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/cpiStepCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:indicatorColor="@color/hwid_auth_button_color_red"
+                        app:indicatorSize="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackColor="#FFCCCB"
+                        app:trackThickness="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvStepCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scl_step_count"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tvStepCountValue"
+                        app:layout_constraintEnd_toEndOf="@id/cpiStepCount"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@id/cpiStepCount"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tvStepCountValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tvStepCountTarget"
+                        app:layout_constraintEnd_toEndOf="@id/cpiStepCount"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@id/cpiStepCount"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStepCount"
+                        tools:text="2300" />
+
+                    <TextView
+                        android:id="@+id/tvStepCountTarget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/scl_target"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tvStepCountTargetValue"
+                        app:layout_constraintEnd_toEndOf="@id/cpiStepCount"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@id/cpiStepCount"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStepCountValue" />
+
+                    <TextView
+                        android:id="@+id/tvStepCountTargetValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cpiStepCount"
+                        app:layout_constraintEnd_toEndOf="@id/cpiStepCount"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@id/cpiStepCount"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStepCountTarget"
+                        tools:text="700" />
+                    <TextView
+                        android:id="@+id/tvLastUpdatedStepsTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cpiStepCount" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ViewFlipper>
+
+            <Button
+                android:id="@+id/btnShowCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/show_calories"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/view_flipper"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnShowSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/show_steps"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/view_flipper"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.sn.lib.NestedProgress
+            android:visibility="gone"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            app:innerLoaderColor="@color/primary_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outerLoaderColor="@color/primary_green_dark" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.hms.socialsteps.core.util.CustomSwipeRefresh>
